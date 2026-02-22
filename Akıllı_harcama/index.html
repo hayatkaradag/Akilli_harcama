@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akıllı Günlük & Harcama Paneli</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div class="container">
+      <header>
+        <h1>Akıllı Günlük & Harcama Paneli</h1>
+        <p>Bütçeni yönet, harcamalarını kontrol et.</p>
+      </header>
+
+      <div class="button-group">
+        <button onclick="getUserData()" class="btn btn-info">
+          Bilgilerimi Gir
+        </button>
+        <button onclick="calculateDay()" class="btn btn-calc">
+          Günü Hesapla
+        </button>
+        <button onclick="resetPanel()" class="btn btn-reset">
+          Paneli Sıfırla
+        </button>
+      </div>
+
+      <div id="result-area" class="result-card" style="display: none">
+        <h2 id="display-name">Merhaba!</h2>
+        <div class="stats">
+          <p>Günlük Bütçe: <span id="budget-val">0</span> TL</p>
+          <p>Harcama: <span id="expense-val">0</span> TL</p>
+          <hr />
+          <p class="status-text">Durum: <strong id="status-msg">---</strong></p>
+        </div>
+        <div id="warning-box" class="alert"></div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
